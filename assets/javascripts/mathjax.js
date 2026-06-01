@@ -1,10 +1,14 @@
 window.MathJax = {
-  tex2jax: {
+  tex: {
     inlineMath: [['$', '$'], ['\\(', '\\)']],
     displayMath: [['$$', '$$'], ['\\[', '\\]']],
-    processEscapes: true
   },
-  asciimath2jax: {
-    useMathML: true
+  startup: {
+    ready: function() {
+      MathJax.startup.defaultReady();
+      MathJax.startup.promise.then(function() {
+        console.log('MathJax is ready');
+      });
+    }
   }
 };

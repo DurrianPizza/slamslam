@@ -38,9 +38,6 @@ plugins:
   - minify:
       minify_html: true
 
-extra_css:
-  - assetsheets/mathjax.css
-
 extra_javascript:
   - assets/javascripts/mathjax.js
   - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML

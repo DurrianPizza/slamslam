@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://huangshuoqiu.github.io/slam-notes/</loc>
+         <loc>https://durrianpizza.github.io/slamslam/</loc>
          <lastmod>2026-06-01</lastmod>
     </url>
     <url>
-         <loc>https://huangshuoqiu.github.io/slam-notes/algorithm/akaze/</loc>
+         <loc>https://durrianpizza.github.io/slamslam/algorithm/akaze/</loc>
          <lastmod>2026-06-01</lastmod>
     </url>
     <url>
-         <loc>https://huangshuoqiu.github.io/slam-notes/algorithm/fast/</loc>
+         <loc>https://durrianpizza.github.io/slamslam/algorithm/fast/</loc>
          <lastmod>2026-06-01</lastmod>
     </url>
     <url>
-         <loc>https://huangshuoqiu.github.io/slam-notes/algorithm/feature_comparison/</loc>
+         <loc>https://durrianpizza.github.io/slamslam/algorithm/feature_comparison/</loc>
          <lastmod>2026-06-01</lastmod>
     </url>
     <url>
-         <loc>https://huangshuoqiu.github.io/slam-notes/algorithm/harris_corner/</loc>
+         <loc>https://durrianpizza.github.io/slamslam/algorithm/harris_corner/</loc>
          <lastmod>2026-06-01</lastmod>
     </url>
     <url>
-         <loc>https://huangshuoqiu.github.io/slam-notes/algorithm/orb/</loc>
+         <loc>https://durrianpizza.github.io/slamslam/algorithm/orb/</loc>
          <lastmod>2026-06-01</lastmod>
     </url>
     <url>
-         <loc>https://huangshuoqiu.github.io/slam-notes/algorithm/plan/</loc>
+         <loc>https://durrianpizza.github.io/slamslam/algorithm/plan/</loc>
          <lastmod>2026-06-01</lastmod>
     </url>
     <url>
-         <loc>https://huangshuoqiu.github.io/slam-notes/algorithm/sift/</loc>
+         <loc>https://durrianpizza.github.io/slamslam/algorithm/sift/</loc>
          <lastmod>2026-06-01</lastmod>
     </url>
     <url>
-         <loc>https://huangshuoqiu.github.io/slam-notes/algorithm/surf/</loc>
+         <loc>https://durrianpizza.github.io/slamslam/algorithm/surf/</loc>
          <lastmod>2026-06-01</lastmod>
     </url>
     <url>
-         <loc>https://huangshuoqiu.github.io/slam-notes/slAM/framework/</loc>
+         <loc>https://durrianpizza.github.io/slamslam/slAM/framework/</loc>
          <lastmod>2026-06-01</lastmod>
     </url>
 </urlset>

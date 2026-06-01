@@ -32,13 +32,9 @@ AKAZE（ACCV 2013）在 KAZE 基础上做了两个关键改进：
 
 FED（Fast Explicit Diffusion，快速显式扩散）不是一种新的偏微分方程求解理论，而是对**显式欧拉法**的加速策略。其核心思想：通过一组不等长的时间步长构成一个"超级步"（cycle），每一步的稳定性条件可以放宽，整体收敛速度比标准显式法快一个数量级，同时保持与 AOS 同等的精度。
 
-具体而言，FED 通过预计算一组优化的时间步长 `τk`：
+具体而言，FED 通过预计算一组优化的时间步长 $\tau_k$：
 
-```
-```
-τk = (3N² + 1) / [k²(N² - k)] · T_cycle / (4N(N+1))
-```
-```
+$$\tau_k = \frac{3N^2 + 1}{k^2(N^2 - k)} \cdot \frac{T_{cycle}}{4N(N+1)}$$
 
 其中 `N` 为每轮循环的子步数，`T_cycle` 为总演化时间。将多个 FED cycle 串联起来逐步演化图像，比逐点迭代的显式欧拉法快很多。AKAZE 还结合了**图像金字塔**（每层独立做 FED 非线性扩散），进一步提升效率。
 
@@ -48,8 +44,6 @@ KAZE 使用 MSURF（改良的 SURF）描述子，计算局部梯度，精度高�
 
 ### 1.4 AKAZE 算法流程
 
-```
-```
 输入图像
   │
   ▼
@@ -69,7 +63,6 @@ KAZE 使用 MSURF（改良的 SURF）描述子，计算局部梯度，精度高�
   │
   ▼
 输出：关键点 + M-LDB 描述子
-```
 ```
 
 **Hessian 矩阵定义**（尺度 $\sigma$ 下的归一化版本）：
@@ -159,8 +152,6 @@ cv::Mat img_matches;
 cv::drawMatches(img1, kp1, img2, kp2, good_matches, img_matches);
 cv::imshow("AKAZE Matches", img_matches);
 cv::waitKey(0);
-```
-```
 
 ### 3.2 带 RANSAC 的单应性估计
 
@@ -205,8 +196,6 @@ cv::drawMatches(img1, kp1, img2, kp2, inliers, img_inliers,
 
 float inlier_ratio = static_cast<float>(inliers.size()) / good_matches.size();
 std::cout << "Inlier ratio: " << inlier_ratio << std::endl;
-```
-```
 
 ### 3.3 自定义参数创建
 
@@ -219,8 +208,6 @@ cv::Ptr<cv::AKAZE> akaze = cv::AKAZE::create(
     4,                            //  仿射不变性参数（默认 4）
     cv::KAZE::DIFF_PM_G2         //  扩散方程类型：PM_G2（默认）或 PM_G1
 );
-```
-```
 
 ---
 

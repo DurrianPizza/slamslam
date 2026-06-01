@@ -83,6 +83,7 @@ $$\theta = \text{atan2}(m_{01}, m_{10})$$
 完整的ORB特征点检测与描述流程：
 
 ```
+```
 输入：图像 I，特征点数量 N，尺度因子 scaleFactor，金字塔层数 nlevels
 
 1. 图像金字塔构建
@@ -109,6 +110,7 @@ $$\theta = \text{atan2}(m_{01}, m_{10})$$
        compare pixel values to generate 256-bit descriptor
 
 输出：Oriented FAST角点列表 + rBRIEF描述子
+```
 ```
 
 关键步骤说明：
@@ -182,6 +184,7 @@ int main() {
     return 0;
 }
 ```
+```
 
 关键OpenCV API说明：
 
@@ -214,10 +217,12 @@ int main() {
 ```cpp
 orb = cv::ORB::create(200, 1.2, 3, 31, 0, 2, cv::ORB::FAST_SCORE, 31, 5);
 ```
+```
 
 **精度要求高的场景**：
 ```cpp
 orb = cv::ORB::create(1000, 1.1, 8, 31, 0, 3, cv::ORB::HARRIS_SCORE, 31, 15);
+```
 ```
 
 ### 4.3 匹配参数

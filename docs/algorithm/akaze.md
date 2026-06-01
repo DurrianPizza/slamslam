@@ -10,15 +10,11 @@
 
 KAZE（ECCV 2012）提出的核心思想是用**非线性扩散方程**替代高斯模糊，构建保边（edge-preserving）的尺度空间。其理论基础是 **Perona-Malik 非线性扩散方程**：
 
-```
-∂L/∂t = div(c(x, y, t) · ∇L)
-```
+$$\frac{\partial L}{\partial t} = \mathrm{div}(c(x, y, t) \cdot \nabla L)$$
 
-其中 `c(x, y, t)` 是扩散系数（conductivity），定义为：
+其中 $c(x, y, t)$ 是扩散系数（conductivity），定义为：
 
-```
-c(x, y, t) = g(|∇Lσ(x, y, t)|)
-```
+$$c(x, y, t) = g(|\nabla L_\sigma(x, y, t)|)$$
 
 扩散系数的常见形式：
 - `g1 = exp(-|∇L|² / λ²)` — 边缘处梯度大，扩散小，边缘保留
@@ -39,7 +35,9 @@ FED（Fast Explicit Diffusion，快速显式扩散）不是一种新的偏微分
 具体而言，FED 通过预计算一组优化的时间步长 `τk`：
 
 ```
+```
 τk = (3N² + 1) / [k²(N² - k)] · T_cycle / (4N(N+1))
+```
 ```
 
 其中 `N` 为每轮循环的子步数，`T_cycle` 为总演化时间。将多个 FED cycle 串联起来逐步演化图像，比逐点迭代的显式欧拉法快很多。AKAZE 还结合了**图像金字塔**（每层独立做 FED 非线性扩散），进一步提升效率。
@@ -50,6 +48,7 @@ KAZE 使用 MSURF（改良的 SURF）描述子，计算局部梯度，精度高�
 
 ### 1.4 AKAZE 算法流程
 
+```
 ```
 输入图像
   │
@@ -71,15 +70,13 @@ KAZE 使用 MSURF（改良的 SURF）描述子，计算局部梯度，精度高�
   ▼
 输出：关键点 + M-LDB 描述子
 ```
-
-**Hessian 矩阵定义**（尺度 σ 下的归一化版本）：
-
-```
-H = | Lxx  Lxy |
-    | Lxy  Lyy |
 ```
 
-检测器响应为 `det(H) = Lxx · Lyy - Lxy²`，在空间和尺度维度取局部极大值即为特征点。
+**Hessian 矩阵定义**（尺度 $\sigma$ 下的归一化版本）：
+
+$$\mathbf{H} = \begin{bmatrix} L_{xx} & L_{xy} \\ L_{xy} & L_{yy} \end{bmatrix}$$
+
+检测器响应为 $\det(\mathbf{H}) = L_{xx} \cdot L_{yy} - L_{xy}^2$，在空间和尺度维度取局部极大值即为特征点。
 
 ---
 
@@ -163,6 +160,7 @@ cv::drawMatches(img1, kp1, img2, kp2, good_matches, img_matches);
 cv::imshow("AKAZE Matches", img_matches);
 cv::waitKey(0);
 ```
+```
 
 ### 3.2 带 RANSAC 的单应性估计
 
@@ -208,10 +206,10 @@ cv::drawMatches(img1, kp1, img2, kp2, inliers, img_inliers,
 float inlier_ratio = static_cast<float>(inliers.size()) / good_matches.size();
 std::cout << "Inlier ratio: " << inlier_ratio << std::endl;
 ```
+```
 
 ### 3.3 自定义参数创建
 
-```cpp
 cv::Ptr<cv::AKAZE> akaze = cv::AKAZE::create(
     cv::AKAZE::DESCRIPTOR_MLDB,  // 描述子类型：MLDB（默认）
     // 还有 DESCRIPTOR_KAZE（KAZE 风格的浮点描述子，但 AKAZE 类中不常用）
@@ -221,6 +219,7 @@ cv::Ptr<cv::AKAZE> akaze = cv::AKAZE::create(
     4,                            //  仿射不变性参数（默认 4）
     cv::KAZE::DIFF_PM_G2         //  扩散方程类型：PM_G2（默认）或 PM_G1
 );
+```
 ```
 
 ---

@@ -91,6 +91,7 @@ $$[\Delta x, \Delta y] M [\Delta x, \Delta y]^T = 1$$
 ### 2.1 Harris角点检测完整流程
 
 ```
+```
 输入：灰度图像 I，参数 k，阈值 T，邻域大小
 输出：角点坐标列表
 
@@ -117,15 +118,16 @@ $$[\Delta x, \Delta y] M [\Delta x, \Delta y]^T = 1$$
 
 6. 输出角点坐标
 ```
+```
 
 ### 2.2 关键参数选择
 
 | 参数 | 典型值 | 说明 |
 |-----|-------|------|
 | $k$ | 0.04 ~ 0.06 | 经验常数，控制对角点的敏感性 |
-| 窗口大小 | 3 × 3 ~ 7 × 7 | 影响检测的稳定性和精度 |
+| 窗口大小 | 3  \times  3 ~ 7  \times  7 | 影响检测的稳定性和精度 |
 | 高斯$\sigma$ | 1.0 ~ 2.0 | 梯度平滑的标准差 |
-| 阈值$T$ | 0.01 ~ 0.1 × max(R) | 响应值阈值 |
+| 阈值$T$ | 0.01 ~ 0.1  \times  max(R) | 响应值阈值 |
 
 ---
 
@@ -133,6 +135,7 @@ $$[\Delta x, \Delta y] M [\Delta x, \Delta y]^T = 1$$
 
 ### 3.1 使用OpenCV内置函数
 
+```cpp
 ```cpp
 #include <opencv2/opencv.hpp>
 #include <iostream>
@@ -183,9 +186,11 @@ int main() {
     return 0;
 }
 ```
+```
 
 ### 3.2 使用goodFeaturesToTrack（Shi-Tomasi变种）
 
+```cpp
 ```cpp
 #include <opencv2/opencv.hpp>
 #include <iostream>
@@ -216,6 +221,7 @@ int main() {
     return 0;
 }
 ```
+```
 
 ---
 
@@ -223,6 +229,7 @@ int main() {
 
 ### 4.1 完整C++实现
 
+```cpp
 ```cpp
 #include <opencv2/opencv.hpp>
 #include <vector>
@@ -361,9 +368,11 @@ int main() {
     return 0;
 }
 ```
+```
 
 ### 4.2 Python实现（NumPy版本）
 
+```python
 ```python
 import numpy as np
 import cv2
@@ -428,6 +437,7 @@ if __name__ == "__main__":
     cv2.imshow("Harris Corners", image)
     cv2.waitKey(0)
 ```
+```
 
 ---
 
@@ -440,10 +450,11 @@ if __name__ == "__main__":
 | **blockSize** | 计算M矩阵的邻域大小 | 影响检测的稳定性；太大会丢失细节，太小会检测到噪声 | 2 ~ 5 |
 | **ksize** | Sobel算子的核大小 | 影响梯度计算的精度；必须为奇数 | 3 |
 | **k** | Harris响应函数的权重系数 | 控制角点检测的敏感性；增大k会使检测更严格（更少的角点） | 0.04 ~ 0.06 |
-| **threshold** | 响应值阈值 | 决定哪些响应被认为是角点 | max(R) × 0.01 ~ 0.1 |
+| **threshold** | 响应值阈值 | 决定哪些响应被认为是角点 | max(R)  \times  0.01 ~ 0.1 |
 
 ### 5.2 参数对检测结果的影响
 
+```
 ```
 k值影响:
 ┌─────────────────────────────────────────────────┐
@@ -469,14 +480,15 @@ k值影响:
 │   → 可能遗漏有效角点                             │
 └─────────────────────────────────────────────────┘
 ```
+```
 
 ### 5.3 窗口大小的影响
 
 | 窗口大小 | 优点 | 缺点 |
 |---------|------|------|
-| 小 (3×3) | 精度高，能检测到细角点 | 对噪声敏感，角点位置可能不精确 |
-| 中 (5×5) | 平衡稳定性和精度 | 可能平滑掉一些细节 |
-| 大 (7×7+) | 抗噪声能力强 | 可能合并相邻角点，降低定位精度 |
+| 小 (3 \times 3) | 精度高，能检测到细角点 | 对噪声敏感，角点位置可能不精确 |
+| 中 (5 \times 5) | 平衡稳定性和精度 | 可能平滑掉一些细节 |
+| 大 (7 \times 7+) | 抗噪声能力强 | 可能合并相邻角点，降低定位精度 |
 
 ---
 
@@ -537,6 +549,7 @@ $$R = \min(\lambda_1, \lambda_2)$$
 ### 7.2 几何解释
 
 ```
+```
 Harris: R = λ₁λ₂ - k(λ₁ + λ₂)²
         └── 抛物线轮廓，在λ₁=λ₂时达到最大值
 
@@ -553,6 +566,7 @@ Shi-Tomasi: R = min(λ₁, λ₂)
                     │   * *
                     │     *
 ```
+```
 
 ### 7.3 Shi-Tomasi的优势
 
@@ -562,6 +576,7 @@ Shi-Tomasi: R = min(λ₁, λ₂)
 
 ### 7.4 代码实现
 
+```cpp
 ```cpp
 #include <opencv2/opencv.hpp>
 #include <vector>
@@ -668,11 +683,13 @@ std::vector<cv::Point2f> shiTomasiDetector(
     return corners;
 }
 ```
+```
 
 ### 7.5 OpenCV中的goodFeaturesToTrack
 
 OpenCV的`goodFeaturesToTrack`函数实现了Shi-Tomasi算法，并提供了额外的改进：
 
+```cpp
 ```cpp
 void cv::goodFeaturesToTrack(
     InputArray image,              // 输入灰度图像
@@ -686,9 +703,11 @@ void cv::goodFeaturesToTrack(
     double k = 0.04                 // Harris参数（仅当useHarrisDetector=true时）
 );
 ```
+```
 
 **使用示例**：
 
+```cpp
 ```cpp
 #include <opencv2/opencv.hpp>
 
@@ -723,6 +742,7 @@ int main() {
 
     return 0;
 }
+```
 ```
 
 ---

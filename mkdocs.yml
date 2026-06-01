@@ -1,10 +1,10 @@
 site_name: SLAM学习笔记
 site_description: 宇树科技算法工程师学习之路
 site_author: 黄硕秋
-site_url: https://huangshuoqiu.github.io/slam-notes
+site_url: https://durrianpizza.github.io/slamslam/
 
-repo_name: slam
-repo_url: https://github.com/huangshuoqiu/slam
+repo_name: slamslam
+repo_url: https://github.com/DurrianPizza/slamslam
 
 theme:
   name: material
@@ -24,15 +24,23 @@ markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.superfences
-  - pymdownx.arithmatex:
-      generic: true
   - admonition
   - pymdownx.details
   - toc:
       permalink: true
   - attr_list
+  - def_list
+  - pymdownx.arithmatex:
+      generic: true
 
 plugins:
   - search
   - minify:
       minify_html: true
+
+extra_css:
+  - assetsheets/mathjax.css
+
+extra_javascript:
+  - assets/javascripts/mathjax.js
+  - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML

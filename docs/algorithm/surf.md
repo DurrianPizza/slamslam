@@ -23,6 +23,7 @@ $$L_{xx} = \frac{\partial^2}{\partial x^2} (G(\sigma) * I), \quad L_{yy} = \frac
 SURF 的核心加速技巧是用**近似高斯二阶导数**替代精确高斯导数。对于 $9 \times 9$ 滤波器，近似核如下：
 
 ```
+```
 Lxx:
 [-1  0  2  0 -1]
 [ 0  0  0  0  0]
@@ -43,6 +44,7 @@ Lxy:
 [-2  0  4  0 -2]
 [ 0  0  0  0  0]
 [ 1  0 -2  0  1]
+```
 ```
 
 为了保持 Hessian 行列式符号一致，在实际实现中 $L_{xy}$ 的权重会适当调整（通常为 $0.9$ 左右），具体公式为：
@@ -164,6 +166,7 @@ int main() {
     return 0;
 }
 ```
+```
 
 ### 3.2 完整管道示例（带异常过滤）
 
@@ -208,15 +211,18 @@ void surfPipeline(const cv::Mat& img query, const cv::Mat& img train) {
     }
 }
 ```
+```
 
 ### 3.3 CMakeLists.txt 依赖
 
+```cmake
 ```cmake
 find_package(OpenCV REQUIRED)
 # OpenCV 需要包含 xfeatures2d 模块（opencv_contrib）
 
 add_executable(surf_demo main.cpp)
 target_link_libraries(surf_demo ${OpenCV_LIBS})
+```
 ```
 
 ---

@@ -315,6 +315,7 @@ int main() {
     return 0;
 }
 ```
+```
 
 ### 5.2 特征匹配测试代码
 
@@ -449,6 +450,7 @@ void testFeatureMatching(const string& img1Path, const string& img2Path) {
     cout << "========================================" << endl;
 }
 ```
+```
 
 ### 5.3 SLAM场景测试
 
@@ -556,6 +558,7 @@ public:
     }
 };
 ```
+```
 
 ---
 
@@ -572,6 +575,7 @@ vector<DMatch> matches;
 matcher.match(desc1, desc2, matches);
 
 // crossMatch = true 时，确保 (A匹配B) 且 (B匹配A)
+```
 ```
 
 **距离度量选择**：
@@ -597,6 +601,7 @@ for (const auto& knn : knnMatches) {
     }
 }
 ```
+```
 
 ### 6.3 匹配质量评估
 
@@ -619,6 +624,7 @@ double calculateMatchScore(const vector<DMatch>& matches,
     }
     return static_cast<double>(inliers) / matches.size();
 }
+```
 ```
 
 ### 6.4 匹配筛选策略
@@ -660,6 +666,7 @@ cv::ORB::create(2000,      // 最大特征点数
                 31,        // 补丁大小
                 20);       // 快速检测阈值
 ```
+```
 
 ### 7.2 同步定位与地图构建 (SLAM)
 
@@ -700,6 +707,7 @@ cv::AKAZE::create(cv::AKAZE::DESCRIPTOR_MLDB,  // M-LDB描述子
                   5,                            // 金字塔层数
                   4,                            // 每层子采样
                   cv::KAZE::DIFF_PM_G2);        // 扩散方程
+```
 ```
 
 ### 7.4 目标识别与跟踪
@@ -768,6 +776,7 @@ detector->setMaxFeatures(1000);
     gpuDetector->detectAndCompute(gpuImg, cv::noArray(), gpuKeypoints, gpuDescriptors);
 #endif
 ```
+```
 
 ### 8.2 算法级优化
 
@@ -823,6 +832,7 @@ private:
     Ptr<BFMatcher> matcher_;
 };
 ```
+```
 
 ---
 
@@ -844,11 +854,13 @@ private:
 ### 快速选择指南
 
 ```
+```
 实时SLAM/VO     -> ORB
 高精度定位      -> AKAZE/KAZE
 资源受限设备    -> ORB/BRISK
 三维重建        -> SIFT/AKAZE
 图像拼接        -> SIFT/SURF/AKAZE
+```
 ```
 
 ### 最佳实践

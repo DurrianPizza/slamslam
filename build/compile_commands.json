@@ -1,0 +1,56 @@
+[
+{
+  "directory": "/Users/huangshuoqiu/projects/slam/slam_c/slam_v1/build",
+  "command": "/usr/bin/c++  -I/opt/homebrew/Cellar/opencv/4.13.0_3/include/opencv4 -I/opt/homebrew/include/eigen3 -I/Users/huangshuoqiu/projects/slam/slam_c/slam_v1/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -o CMakeFiles/slam_core.dir/src/types/frame.cpp.o -c /Users/huangshuoqiu/projects/slam/slam_c/slam_v1/src/types/frame.cpp",
+  "file": "/Users/huangshuoqiu/projects/slam/slam_c/slam_v1/src/types/frame.cpp",
+  "output": "CMakeFiles/slam_core.dir/src/types/frame.cpp.o"
+},
+{
+  "directory": "/Users/huangshuoqiu/projects/slam/slam_c/slam_v1/build",
+  "command": "/usr/bin/c++  -I/opt/homebrew/Cellar/opencv/4.13.0_3/include/opencv4 -I/opt/homebrew/include/eigen3 -I/Users/huangshuoqiu/projects/slam/slam_c/slam_v1/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -o CMakeFiles/slam_core.dir/src/types/map_point.cpp.o -c /Users/huangshuoqiu/projects/slam/slam_c/slam_v1/src/types/map_point.cpp",
+  "file": "/Users/huangshuoqiu/projects/slam/slam_c/slam_v1/src/types/map_point.cpp",
+  "output": "CMakeFiles/slam_core.dir/src/types/map_point.cpp.o"
+},
+{
+  "directory": "/Users/huangshuoqiu/projects/slam/slam_c/slam_v1/build",
+  "command": "/usr/bin/c++  -I/opt/homebrew/Cellar/opencv/4.13.0_3/include/opencv4 -I/opt/homebrew/include/eigen3 -I/Users/huangshuoqiu/projects/slam/slam_c/slam_v1/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -o CMakeFiles/slam_core.dir/src/types/key_frame.cpp.o -c /Users/huangshuoqiu/projects/slam/slam_c/slam_v1/src/types/key_frame.cpp",
+  "file": "/Users/huangshuoqiu/projects/slam/slam_c/slam_v1/src/types/key_frame.cpp",
+  "output": "CMakeFiles/slam_core.dir/src/types/key_frame.cpp.o"
+},
+{
+  "directory": "/Users/huangshuoqiu/projects/slam/slam_c/slam_v1/build",
+  "command": "/usr/bin/c++  -I/opt/homebrew/Cellar/opencv/4.13.0_3/include/opencv4 -I/opt/homebrew/include/eigen3 -I/Users/huangshuoqiu/projects/slam/slam_c/slam_v1/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -o CMakeFiles/slam_core.dir/src/core/detector.cpp.o -c /Users/huangshuoqiu/projects/slam/slam_c/slam_v1/src/core/detector.cpp",
+  "file": "/Users/huangshuoqiu/projects/slam/slam_c/slam_v1/src/core/detector.cpp",
+  "output": "CMakeFiles/slam_core.dir/src/core/detector.cpp.o"
+},
+{
+  "directory": "/Users/huangshuoqiu/projects/slam/slam_c/slam_v1/build",
+  "command": "/usr/bin/c++  -I/opt/homebrew/Cellar/opencv/4.13.0_3/include/opencv4 -I/opt/homebrew/include/eigen3 -I/Users/huangshuoqiu/projects/slam/slam_c/slam_v1/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -o CMakeFiles/slam_core.dir/src/core/matcher.cpp.o -c /Users/huangshuoqiu/projects/slam/slam_c/slam_v1/src/core/matcher.cpp",
+  "file": "/Users/huangshuoqiu/projects/slam/slam_c/slam_v1/src/core/matcher.cpp",
+  "output": "CMakeFiles/slam_core.dir/src/core/matcher.cpp.o"
+},
+{
+  "directory": "/Users/huangshuoqiu/projects/slam/slam_c/slam_v1/build",
+  "command": "/usr/bin/c++  -I/opt/homebrew/Cellar/opencv/4.13.0_3/include/opencv4 -I/opt/homebrew/include/eigen3 -I/Users/huangshuoqiu/projects/slam/slam_c/slam_v1/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -o CMakeFiles/slam_core.dir/src/core/pose_estimator.cpp.o -c /Users/huangshuoqiu/projects/slam/slam_c/slam_v1/src/core/pose_estimator.cpp",
+  "file": "/Users/huangshuoqiu/projects/slam/slam_c/slam_v1/src/core/pose_estimator.cpp",
+  "output": "CMakeFiles/slam_core.dir/src/core/pose_estimator.cpp.o"
+},
+{
+  "directory": "/Users/huangshuoqiu/projects/slam/slam_c/slam_v1/build",
+  "command": "/usr/bin/c++  -I/opt/homebrew/Cellar/opencv/4.13.0_3/include/opencv4 -I/opt/homebrew/include/eigen3 -I/Users/huangshuoqiu/projects/slam/slam_c/slam_v1/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -o CMakeFiles/slam_core.dir/src/backend/map.cpp.o -c /Users/huangshuoqiu/projects/slam/slam_c/slam_v1/src/backend/map.cpp",
+  "file": "/Users/huangshuoqiu/projects/slam/slam_c/slam_v1/src/backend/map.cpp",
+  "output": "CMakeFiles/slam_core.dir/src/backend/map.cpp.o"
+},
+{
+  "directory": "/Users/huangshuoqiu/projects/slam/slam_c/slam_v1/build",
+  "command": "/usr/bin/c++  -I/opt/homebrew/Cellar/opencv/4.13.0_3/include/opencv4 -I/opt/homebrew/include/eigen3 -I/Users/huangshuoqiu/projects/slam/slam_c/slam_v1/include -O3 -DNDEBUG -std=gnu++17 -arch arm64 -o CMakeFiles/slam_core.dir/src/frontend/frontend.cpp.o -c /Users/huangshuoqiu/projects/slam/slam_c/slam_v1/src/frontend/frontend.cpp",
+  "file": "/Users/huangshuoqiu/projects/slam/slam_c/slam_v1/src/frontend/frontend.cpp",
+  "output": "CMakeFiles/slam_core.dir/src/frontend/frontend.cpp.o"
+},
+{
+  "directory": "/Users/huangshuoqiu/projects/slam/slam_c/slam_v1/build",
+  "command": "/usr/bin/c++  -I/opt/homebrew/include/eigen3 -I/Users/huangshuoqiu/projects/slam/slam_c/slam_v1/include -isystem /opt/homebrew/Cellar/opencv/4.13.0_3/include/opencv4 -O3 -DNDEBUG -std=gnu++17 -arch arm64 -o CMakeFiles/run_slam.dir/practice/main.cpp.o -c /Users/huangshuoqiu/projects/slam/slam_c/slam_v1/practice/main.cpp",
+  "file": "/Users/huangshuoqiu/projects/slam/slam_c/slam_v1/practice/main.cpp",
+  "output": "CMakeFiles/run_slam.dir/practice/main.cpp.o"
+}
+]

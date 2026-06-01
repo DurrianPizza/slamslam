@@ -1,0 +1,4 @@
+-I/opt/homebrew/Cellar/eigen/5.0.1/include/eigen3
+-I/opt/homebrew/opt/opencv/include/opencv4
+-I/Users/huangshuoqiu/projects/slam/slam_c/slam_v1/include
+-std=c++17

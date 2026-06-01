@@ -1,0 +1,38 @@
+site_name: SLAM学习笔记
+site_description: 宇树科技算法工程师学习之路
+site_author: 黄硕秋
+site_url: https://huangshuoqiu.github.io/slam-notes
+
+repo_name: slam
+repo_url: https://github.com/huangshuoqiu/slam
+
+theme:
+  name: material
+  language: zh
+  palette:
+    primary: deep orange
+    accent: orange
+    features:
+      - navigation.tabs
+      - navigation.sections
+      - navigation.instant
+      - search.suggest
+      - search.highlight
+      - content.code.copy
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+  - admonition
+  - pymdownx.details
+  - toc:
+      permalink: true
+  - attr_list
+
+plugins:
+  - search
+  - minify:
+      minify_html: true

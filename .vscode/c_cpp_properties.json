@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/include",
+                "/opt/homebrew/Cellar/eigen/5.0.1/include/eigen3",
+                "/opt/homebrew/Cellar/opencv/4.13.0_3/include/opencv4"
+            ],
+            "defines": [],
+            "cppStandard": "c++17",
+            "compilerPath": "/usr/bin/clang++",
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json"
+        }
+    ],
+    "version": 4
+}

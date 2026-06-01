@@ -1,0 +1,13 @@
+[
+  {
+    "directory": "/Users/huangshuoqiu/projects/slam/slam_c/slam_v1",
+    "file": "dummy.cpp",
+    "arguments": [
+      "clang++",
+      "-I/opt/homebrew/Cellar/eigen/5.0.1/include/eigen3",
+      "-I/opt/homebrew/opt/opencv/include/opencv4",
+      "-std=c++17",
+      "-fsyntax-only"
+    ]
+  }
+]

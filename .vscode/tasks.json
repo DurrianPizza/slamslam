@@ -1,0 +1,23 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "CMake Build",
+            "command": "cd ${workspaceFolder}/build && make -j$(nproc)",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "CMake build task"
+        },
+        {
+            "type": "shell",
+            "label": "CMake Reconfigure",
+            "command": "cd ${workspaceFolder} && rm -rf build && mkdir -p build && cd build && cmake .. -DCMAKE_BUILD_TYPE=Release",
+            "problemMatcher": [],
+            "detail": "CMake reconfigure task"
+        }
+    ],
+    "version": "2.0.0"
+}

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libslam_core.a CMakeFiles/slam_core.dir/src/types/frame.cpp.o CMakeFiles/slam_core.dir/src/types/map_point.cpp.o CMakeFiles/slam_core.dir/src/types/key_frame.cpp.o CMakeFiles/slam_core.dir/src/core/detector.cpp.o CMakeFiles/slam_core.dir/src/core/matcher.cpp.o CMakeFiles/slam_core.dir/src/core/pose_estimator.cpp.o CMakeFiles/slam_core.dir/src/backend/map.cpp.o CMakeFiles/slam_core.dir/src/frontend/frontend.cpp.o
+/usr/bin/ranlib libslam_core.a
